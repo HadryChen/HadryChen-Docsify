@@ -1,0 +1,67 @@
+/* 基础高亮 */
+.keyword {
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+/* 颜色扩展 */
+.keyword.green { background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); }
+.keyword.red { background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 100%); }
+.keyword.purple { background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%); }
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #6c757d;
+  cursor: help;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+
+h1.gradient {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+
+blockquote.card {
+  background: white;
+  border-left: 4px solid #42b983;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(66, 185, 131, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(66, 185, 131, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(66, 185, 131, 0); }
+}
+
+.focus-box {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  animation: pulse 2s infinite;
+  margin: 20px 0;
+}
