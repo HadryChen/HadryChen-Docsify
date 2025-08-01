@@ -9,15 +9,26 @@
 
 #### "dev配置"
 
-dev详细信息
+> [!note]
+> dev详细信息
 
-#### "uat配置"
+<!-- tabs:end -->
 
-uat详细信息
+<!-- tabs:start -->
 
-#### "rel配置"
+#### uat配置
 
-rel详细信息
+> [!tip]
+> uat详细信息
+
+<!-- tabs:end -->
+
+<!-- tabs:start -->
+
+#### rel配置
+
+> [!warring]
+> rel详细信息
 
 <!-- tabs:end -->
 
