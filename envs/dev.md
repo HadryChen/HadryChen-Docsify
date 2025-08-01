@@ -7,7 +7,7 @@
 
 <!-- tabs:start -->
 
-#### "dev配置"
+#### dev配置
 
 > [!note]
 > dev详细信息
