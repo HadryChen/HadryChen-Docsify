@@ -40,7 +40,13 @@
 
 <!-- tabs:end -->
 
-### dev
+### 代码高亮
+
+``` html
+<script src="//unpkg.com/docsify"></script>
+<script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+```
 
 
 ## Clickhouse
