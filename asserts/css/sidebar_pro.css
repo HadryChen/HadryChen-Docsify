@@ -1,0 +1,110 @@
+/* docsify-sidebar.css */
+/* 简约现代风格侧边栏优化 */
+
+/* 整体侧边栏样式 */
+.sidebar {
+  background-color: #f8fafc !important; /* 柔和背景色 */
+  padding: 1rem 0 !important;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 标题层级色系 */
+.sidebar .sidebar-nav h1 {
+  font-size: 1.1rem !important;
+  color: #2563eb !important; /* 一级标题 - 活力蓝 */
+  font-weight: 700;
+  padding: 12px 20px !important;
+  margin: 15px 0 5px 0 !important;
+  border-left: 4px solid #2563eb !important;
+  background: rgba(37, 99, 235, 0.05) !important;
+}
+
+.sidebar .sidebar-nav h2 {
+  font-size: 1rem !important;
+  color: #db2777 !important; /* 二级标题 - 优雅粉 */
+  padding: 10px 20px 10px 30px !important;
+  margin: 8px 0 !important;
+  border-left: 3px solid #db2777 !important;
+}
+
+.sidebar .sidebar-nav h3 {
+  font-size: 0.95rem !important;
+  color: #059669 !important; /* 三级标题 - 自然绿 */
+  padding: 8px 20px 8px 40px !important;
+  margin: 5px 0 !important;
+  border-left: 2px solid #059669 !important;
+}
+
+/* 链接样式 */
+.sidebar ul li a {
+  color: #334155 !important; /* 主要文本色 */
+  padding: 10px 20px !important;
+  display: block !important;
+  transition: all 0.25s ease !important;
+  border-radius: 0 30px 30px 0 !important;
+  margin: 3px 0 !important;
+  position: relative !important;
+}
+
+/* 链接悬停动画 */
+.sidebar ul li a:hover {
+  background: #e0f2fe !important;
+  color: #2563eb !important;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+/* 当前活动链接 */
+.sidebar ul li a.active {
+  background: linear-gradient(90deg, #dbeafe, #eff6ff) !important;
+  color: #2563eb !important;
+  font-weight: 600;
+}
+
+/* 添加小箭头指示 */
+.sidebar ul li a.active::after {
+  content: "→";
+  position: absolute;
+  right: 15px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* 目录树缩进优化 */
+.sidebar ul li ul {
+  border-left: 1px dashed #cbd5e1 !important;
+  margin-left: 15px !important;
+  padding-left: 10px !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80% !important;
+    transform: translateX(-100%);
+    z-index: 100;
+  }
+  
+  .sidebar-toggle {
+    display: block !important;
+    background: #2563eb;
+  }
+}
+
+.sidebar .sidebar-nav li>span::before {
+  content: "▶";
+  position: absolute;
+  left: 10px;
+  font-size: 0.7em;
+  transition: transform 0.2s;
+}
+
+.sidebar .sidebar-nav li.active>span::before {
+  transform: rotate(90deg);
+}
